@@ -1,0 +1,414 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+    -webkit-font-smoothing: antialiased;
+}
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+
+    overflow-x: hidden;
+}
+
+body, body * {
+    font-family: "Lato", sans-serif;
+}
+
+body {
+     margin: 0;
+    padding: 0;
+    color: #C4C4CC;
+    background-color: #202024;
+}
+
+header {
+    background-color: #121214;
+    color: #C4C4CC;
+
+    padding: 2rem 0;
+
+    height: 220px;
+}
+
+header .inner {
+    max-width: 1120px;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-inline: auto;
+    font-size: 2rem;
+    font-weight: bold
+}
+
+#logo{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+main {
+    max-width: 1120px;
+    margin: 0 auto;
+}
+
+.summary {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+    margin-top: -5rem;
+}
+
+.summary strong {
+    font-size: 2rem;
+}
+
+.summary p{
+    margin-top: 1rem;
+    font-size: 0.75rem;
+}
+
+.summary .inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.summary-card {
+    font-size: 1rem;
+    color: #C4C4CC;
+    background-color: #323238;
+    padding: 1.75rem;
+    border-radius: 0.25rem;
+    flex: 1;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 352px;
+    word-break: break-word;
+}
+
+.ph.ph-arrow-circle-up,
+.ph.ph-arrow-circle-down,
+.ph.ph-currency-dollar{
+    font-size: 2rem;
+}
+
+.ph.ph-arrow-circle-up{
+    color: #00B37E;
+}
+
+.ph.ph-arrow-circle-down{
+    color: #F75A68;
+}
+
+.total{
+    background-color: #6F00B3;
+}
+
+.search-bar{
+    width: 100%;
+    padding-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+#search-input{
+    width: 100%;
+    border-radius: 0.375rem;
+    padding: 1rem;
+}
+
+#search-button{
+    padding: 0.875rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-size: 1rem;
+    border: 1px solid #6F00B3;
+    border-radius: 0.375rem;
+    background-color: #29292e;
+    color: #c260ff;
+    line-height: 0;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+#search-button i {
+    font-size: 1.25rem;
+}
+
+.transactions {
+    margin-top: 2rem;
+}
+
+.transaction {
+    display: flex;
+    justify-content: space-between;
+    background: #323238;
+    color: #C4C4CC;
+    border-radius: 0.25rem;
+    margin: 0.5rem 0;
+    padding: 1.25rem 2rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.transaction-text{
+    width: 240px;
+    align-items: center;
+    display: flex;
+    word-break: break-word;
+}
+
+.transaction-category,
+.transaction-amount{
+    width: 200px;
+    align-items: center;
+    display: flex;
+}
+
+.transaction-category{
+    justify-content: center;
+}
+
+.transaction-amount{
+    word-break: break-word;
+}
+
+.transaction-data{
+    width: auto;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.transaction .delete-button {
+    background: #323238;
+    color: #C4C4CC;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    transition: background 0.2s;
+}
+
+.transaction .delete-button:hover {
+    background: #323238;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+}
+
+.transaction .update-button {
+    background: #323238;
+    color: #C4C4CC;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    transition: background 0.2s;
+}
+
+.transaction .update-button:hover {
+    background: #323238;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+}
+
+.add-transaction {
+    background: #6F00B3;
+    color: #C4C4CC;
+    border: none;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 0.25rem;
+}
+
+.add-transaction:hover {
+    background: #6F00B3;
+}
+
+.modal {
+    color: #C4C4CC;
+    background: #202024;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.9);
+    display: none;
+    width: 500px;
+    height: auto;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.new-transaction{
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.new-transaction span {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+#modal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.modal-overlay {
+    display: none;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#search-input,
+.modal input,
+.modal select{
+    font-size: 1rem;
+    padding: 1rem;
+    border: 1px solid #121214;
+    border-radius: 0.25rem;
+    background-color: #121214;
+    color: #C4C4CC;
+}
+
+.modal input {
+    height: max-content;
+}
+
+.transaction-type{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 15px;
+}
+
+.save-button{
+    width: 100%;
+    margin-top: 1rem;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    border-radius: 0.25rem;
+    background-color: #6F00B3;
+    color: #C4C4CC;
+    cursor: pointer;
+    transition: background 100ms;
+}
+
+.save-button:hover {
+    background-color: #8e05e3;
+}
+
+#transaction-type {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.transaction-type-button {
+    padding: 1rem 1.5rem;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    font-size: 1rem;
+    border: 1px solid transparent;
+    border-radius: 0.375rem;
+    background-color: #29292e;
+    color: #C4C4CC;
+    line-height: 0;
+    cursor: pointer;
+}
+
+.transaction-type-button[data-type="income"] i {
+    color: #00B37E;
+    font-weight: normal;
+}
+
+.transaction-type-button[data-type="expense"] i {
+    color: #aa2834;
+    font-weight: normal;
+}
+.transaction-type-button:hover {
+    background-color: #323238;
+}
+
+.transaction-type-button i {
+    font-size: 1.5rem;
+}
+
+.close-button {
+    background-color: transparent;
+    padding: .5rem;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #C4C4CC;
+    border: none;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    transition: background 0.2s;
+    cursor: pointer;
+}
+
+.close-button:hover {
+    background: #121214;
+}
+
+/* Destaque para o botão de tipo de transação selecionado */
+.selected[data-type="income"] {
+    background: #015F43;
+    color: #C4C4CC;
+}
+
+.selected[data-type="income"] i {
+    color: #C4C4CC;
+}
+
+.selected[data-type="expense"] {
+    background: #aa2834;
+    color: #C4C4CC;
+}
+
+.selected[data-type="expense"] i {
+    color: #C4C4CC;
+}
+
+@media (max-width: 1440px) {
+    html {
+        font-size: 87.5%;
+    }
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" data-is-modal-open="false">
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>PessoalCash</title>
+    
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="inner">
+            <div id="logo">
+                <img src="./assets/logo.svg" alt="" srcset="">
+                <span>PessoalCash</span>
+            </div>
+            <button class="add-transaction">Adicionar Transação</button>
+        </div>
+    </header>
+    
+    <main>
+        <div class="summary">
+            <div class="summary-card income">
+                <div>
+                    <div class="inner">
+                        <span>Entradas</span>
+                        <i class="ph ph-arrow-circle-up"></i>
+                    </div>
+                </div>
+                <strong id="income-display">R$ 0,00</strong>
+            </div>
+            <div class="summary-card expense">
+                <div>
+                    <div class="inner">
+                        <span>Saídas</span>
+                        <i class="ph ph-arrow-circle-down"></i>
+                    </div>
+                </div>
+                <strong id="expense-display">R$ 0,00</strong>
+            </div>
+            <div class="summary-card total">
+                <div>
+                    <div class="inner">
+                        <span>Total</span>
+                        <i class="ph ph-currency-dollar"></i>
+                    </div>
+                </div>
+                <strong id="total-display">R$ 0,00</strong>
+            </div>
+        </div>
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Pesquisar por transações">
+            <button id="search-button"><i class="ph ph-magnifying-glass"></i> Buscar</button>
+        </div>
+        <section class="transactions">
+            <ul id="transactions-list">
+            </ul>
+        </section>
+    </main>
+
+    <div class="modal-overlay">
+        <div class="modal">
+            <div class="new-transaction">
+                <span>Nova Transação</span>
+                <button type="button" class="close-button">
+                    <i class="ph ph-x"></i>
+                </button>
+            </div>
+    
+            <form id="modal-form">
+                <input type="description" id="description" placeholder="Descrição" required>
+                <input type="number" min="0" step="any" id="amount" placeholder="Valor" required> 
+                
+                <select id="category">
+                    <option value="0" disabled selected>Selecione uma opção </option>
+                    <option value="agua">Água</option>
+                    <option value="alimentacao">Alimentação</option>
+                    <option value="aluguel">Aluguel</option>
+                    <option value="animal_de_estimacao">Animal de Estimação</option>
+                    <option value="compras">Compras</option>
+                    <option value="energia">Energia</option>
+                    <option value="internet">Internet</option>
+                    <option value="lazer">Lazer</option>
+                    <option value="outros">Outros</option>
+                    <option value="salario">Salário</option>
+                </select>
+                      
+                <input type="date" id="date" placeholder="Data" required>
+    
+                <div id="transaction-type">
+                    <button type="button" class="transaction-type-button" data-type="income">
+                        <i class="ph ph-arrow-circle-up"></i>
+                        Entrada
+                    </button>
+                    <button type="button" class="transaction-type-button" data-type="expense">
+                        <i class="ph ph-arrow-circle-down"></i>
+                        Saída
+                    </button>
+                </div>
+    
+                <button type="submit" class="save-button">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>      
+</html>
